@@ -1,0 +1,28 @@
+$breakpoints: (
+    'phone': 480px,
+	'tablet': 768px,
+	'desktop': 1024px
+);
+
+// // keywords
+// $media-expressions: (
+// 	'screen': 'screen',
+// 	'print': 'print',
+// 	'handheld': 'handheld',
+// 	'landscape': '(orientation: landscape)',
+// 	'portrait': '(orientation: portrait)',
+// 	'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+// 	'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+// );
+
+//elements
+@import "./styles/vendors/include-media";
+@import "./styles/elements/user";
+@import "./styles/elements/navBar";
+@import "./styles/elements/dropdown";
+@import "./styles/elements/userinfo";
+@import "./styles/elements/useraddress";
+
+//pages
+@import "./styles/pages/login";
+@import "./styles/pages/home"

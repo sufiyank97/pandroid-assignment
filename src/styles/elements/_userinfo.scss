@@ -1,0 +1,45 @@
+.user-info{
+    font-size: 1.1rem;
+    font-weight: 300;
+    display: flex;
+    margin-bottom: 0.5rem;
+
+    &-grey{
+        margin-left: auto;
+        margin-right: 1rem;
+        font-size: inherit;
+        color: #bbb;
+        align-self: flex-end;
+    }
+
+    &-black{
+        align-self: flex-start;
+        width: 60%;
+        font-size: inherit;
+        color: #555;
+    }
+}
+
+.about{
+    flex-direction: column;
+    border-right: 1px solid;
+
+    &-info{
+        border-bottom: 1px solid;
+    }
+
+    &-company-name{
+        font-size:1.3rem;
+        text-align: center;
+        color: #bbb;
+    }
+}
+
+
+
+.profile{
+    width: 100%;
+    height: fit-content;
+    margin-top: 1.5rem;
+    display: flex;
+}

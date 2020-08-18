@@ -1,0 +1,65 @@
+
+.modal{
+    
+    top:4rem !important;
+    left:48% !important;
+
+    &-backdrop.show {
+        opacity: 0 !important;
+    }
+
+    &-content{
+        width: 50% !important;
+        border-radius: 2rem !important;
+    }
+
+    &-footer{
+        justify-content: center !important;
+        border: 0px !important;
+    }
+}
+
+.btn-footer{
+    background-color: #e44145;
+    border-radius: 1rem;
+    width: 6rem;
+    border: none;
+    height: 3rem;
+    color: white;
+    padding: .30rem;
+}
+
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+    &-email{
+        font-size: 1.2rem;
+        color: #bbb;
+    }
+
+    &-add{
+        &-button{
+            margin: 1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-evenly;
+    
+            &-icon{
+                width: 3.5rem;
+                font-size: 1.9rem;
+            }
+    
+            &-text{
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &-list{
+        overflow-y: scroll;
+        height: 5rem;
+    }
+}
