@@ -1,7 +1,7 @@
 .card{
 
     @include media('>tablet') {
-        width: 40%;
+        width: 46%;
     }
     
     @include media('<tablet') {
@@ -27,4 +27,33 @@
         height: 27rem;
     }
     
+}
+
+
+.login{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.svg-data{
+    &-first{
+        top:0rem;
+        left:-1rem;
+        height: 24rem;
+        position: absolute;
+        z-index: -1;
+    }
+    &-second {
+        left: -1rem;
+        height: 24rem;
+        position: absolute;
+        top: 4rem;
+        z-index: -2;  
+      }
 }
