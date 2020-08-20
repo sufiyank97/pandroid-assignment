@@ -11,6 +11,8 @@
     &-content{
         width: 50% !important;
         border-radius: 2rem !important;
+        box-shadow: 0 0 47px #DDD;
+        border-color: white;
     }
 
     &-footer{
@@ -27,6 +29,9 @@
     height: 3rem;
     color: white;
     padding: .30rem;
+    &:focus{
+        outline: none;
+    }
 }
 
 .dropdown{

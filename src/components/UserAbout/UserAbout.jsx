@@ -6,8 +6,8 @@ const UserAbout = () => {
     const { username, phone, website, email, company } = values.currentUser
     const { name, catchPhrase, bs } = company;
     return (
-        <div className="about w-50 d-flex px-2">
-            <div className="about-info">
+        <div className="about w-34 d-flex px-2">
+            <div className="about-info mb-4">
                 <UserTitle user={values.currentUser} size="huge" />
                 <UserInfo
                     title="Username"

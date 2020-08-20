@@ -13,33 +13,39 @@ const NavBar = () => {
     return (
         <nav className="nav flex-column">
             {
-                state.navDatas.map(data =>
-                    <div className="nav-link" key={data.id}>
-                        <Link to={`/${data.name.toLowerCase()}`} className={`nav-link-text  pl-5 ${(data.active) ? 'nav-link-text-active' : ''}`} onClick={
-                            (e) => {
-                                setValue({
-                                    ...values,
-                                    tabName: data.name
-                                })
-                                setState({
-                                    ...state,
-                                    navDatas: state.navDatas.map(n1 =>
-                                        n1.id == data.id ? { ...n1, active: true } : { ...n1, active: false }
-                                    ),
-                                    id: data.id
-                                })
+                state.navDatas.map((data, i) =>
+                    <Fragment key={data.id}>
+                        <div className="nav-link">
+                            <Link to={`/${data.name.toLowerCase()}`} className={`nav-link-text   ${(data.active) ? 'nav-link-text-active' : ''}`} onClick={
+                                (e) => {
+                                    setValue({
+                                        ...values,
+                                        tabName: data.name
+                                    })
+                                    setState({
+                                        ...state,
+                                        navDatas: state.navDatas.map(n1 =>
+                                            n1.id == data.id ? { ...n1, active: true } : { ...n1, active: false }
+                                        ),
+                                        id: data.id
+                                    })
+                                }
+                            } href="#">{data.name}</Link>
+
+                            {
+                                data.active ? (
+                                    <span className="nav-link-indicator">
+                                        <i className="nav-link-indicator-icon fas fa-chevron-right" />
+                                    </span>
+                                ) :
+                                    <Fragment />
                             }
-                        } href="#">{data.name}</Link>
-                        <hr />
+                        </div>
                         {
-                            data.active ? (
-                                <span className="nav-link-indicator">
-                                    <i className="nav-link-indicator-icon fas fa-chevron-right" />
-                                </span>
-                            ) :
-                                <Fragment />
+                            (state.navDatas.length === ++i) ? <Fragment /> : <span className="divider" style={{ backgroundColor: 'rgba(255, 255, 255, 0.4)' }}></span>
                         }
-                    </div>
+
+                    </Fragment>
                 )
             }
         </nav >

@@ -32,10 +32,12 @@ const Login = () => {
                                 <div className="card-list px-3 pt-2">
 
                                     {
-                                        datas.map(data => (
+                                        datas.map((data, i) => (
                                             <Fragment key={data.id}>
                                                 <UserTitle user={data} key={data.id} type="login" size="small" />
-                                                <span className="divider"></span>
+                                                {
+                                                    (datas.length === ++i) ? <Fragment /> : <span className="divider"></span>
+                                                }
                                             </Fragment>
                                         )
                                         )

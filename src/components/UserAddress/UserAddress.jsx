@@ -6,9 +6,10 @@ const UserAddress = () => {
     const { address } = values.currentUser;
     const { street, suite, city, zipcode, geo } = address;
     return (
-        <div className="address w-50 d-flex px-2">
+        <div className="address">
+
+            <span className="address-text">Address :</span>
             <div className="address-info">
-                <span className="address-text">Address</span>
                 <UserInfo
                     title="Street"
                     value={street}
@@ -25,6 +26,17 @@ const UserAddress = () => {
                     title="Zipcode"
                     value={zipcode}
                 />
+            </div>
+            <div className="address-map">
+                <img className="address-map-image" src="" alt="User Address Map" />
+            </div>
+            <div className="address-geo">
+                <div>
+                    <span className="address-geo-grey">Lat:</span>
+                    <span className="address-geo-black">{geo.lat}</span>
+                    <span className="address-geo-grey">Lng:</span>
+                    <span className="address-geo-black">{geo.lng}</span>
+                </div>
             </div>
         </div>
     )
