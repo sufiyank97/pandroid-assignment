@@ -74,7 +74,7 @@ const DropDownComponent = (props) => {
                     </span>
 
                     <button className="btn-footer" onClick={() => {
-                        setValue({ currentUser: {}, addUser: [], tabName: '' });
+                        setValue({ ...values, currentUser: {}, addUser: [], tabName: '' });
                         handleClose()
                     }}>Sign out</button>
                 </Modal.Footer>

@@ -19,11 +19,12 @@ $breakpoints: (
 }
 //elements
 @import "./styles/vendors/include-media";
-@import "./styles/elements/user";
+@import "./styles/elements/usertitle";
 @import "./styles/elements/navBar";
 @import "./styles/elements/dropdown";
 @import "./styles/elements/userinfo";
 @import "./styles/elements/useraddress";
+@import "./styles/elements/chat";
 
 //pages
 @import "./styles/pages/login";

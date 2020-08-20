@@ -5,7 +5,7 @@ import UserAbout from './UserAbout/UserAbout'
 import UserAddress from './UserAddress/UserAddress'
 import UserInfo from './UserInfo/UserInfo'
 import UserTitle from './UserTitle/UserTitle'
-
+import ChatWindow from './ChatWindow/ChatWindow'
 
 export {
     DropDownComponent,
@@ -14,5 +14,6 @@ export {
     UserAbout,
     UserAddress,
     UserInfo,
-    UserTitle
+    UserTitle,
+    ChatWindow
 }

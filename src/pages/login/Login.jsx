@@ -1,16 +1,20 @@
-import React, { useState, useEffect, Fragment, useContext } from 'react'
+import React, { useEffect, Fragment, useContext } from 'react'
 import axios from 'axios';
 import UserTitle from '../../components/UserTitle/UserTitle'
 import { UserContext } from '../../components/Providers/UserProvider/UserContext'
 const Login = () => {
-    const [datas, setState] = useState([])
-    const { values } = useContext(UserContext)
+
+    const { values, setValue } = useContext(UserContext)
     useEffect(() => {
         let isCancelled = false
         const fetchApi = async () => {
             const res = await axios.get("https://panorbit.in/api/users.json")
-            const result = res.data.users.filter(obj => !values.addUser.some(obj2 => obj.id === obj2.id))
-            setState(result)
+            const allUsers = res.data.users
+
+            setValue({
+                ...values,
+                allUsers
+            })
         }
         (!isCancelled && fetchApi())
         return () => {
@@ -21,7 +25,7 @@ const Login = () => {
     return (
         <div className="login">
             {
-                (datas.length === 0) ? (
+                (values.allUsers.length === 0) ? (
                     <div className="">Loading...</div>
                 ) : (
                         <div className="card  mx-5 my-5">
@@ -32,11 +36,11 @@ const Login = () => {
                                 <div className="card-list px-3 pt-2">
 
                                     {
-                                        datas.map((data, i) => (
+                                        values.allUsers.filter(obj => !values.addUser.some(obj2 => obj.id === obj2.id)).map((data, i) => (
                                             <Fragment key={data.id}>
                                                 <UserTitle user={data} key={data.id} type="login" size="small" />
                                                 {
-                                                    (datas.length === ++i) ? <Fragment /> : <span className="divider"></span>
+                                                    (values.allUsers.length === ++i) ? <Fragment /> : <span className="divider"></span>
                                                 }
                                             </Fragment>
                                         )

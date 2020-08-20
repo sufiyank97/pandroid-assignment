@@ -30,6 +30,36 @@
         }
     }
 
+    &-extra-small{
+        flex-direction: row;
+
+        &:hover{
+            cursor: inherit;
+        }
+
+        &-image{
+            width: 2rem;
+            height: 2rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            margin-right: 1.2rem;
+
+            &-value{
+                display: block;
+                margin: 0 auto;
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        &-title{
+            font-weight: 300;
+            font-size: 1rem;
+            color: inherit;
+        }
+    }
+
     &-medium{
         flex-direction: column;
         

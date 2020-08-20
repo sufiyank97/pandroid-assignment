@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
 
-import { Profile, Posts, ToDo, Gallery } from '../index'
+import { Profile, Posts, ToDo, Gallery, Chat } from '../index'
 import { NavBar, Header } from '../../components/index'
 
 const Home = () => {
@@ -17,6 +17,8 @@ const Home = () => {
                     <Route exact path='/Gallery' component={Gallery} />
                     <Route exact path='/todo' component={ToDo} />
                 </Switch>
+
+                <Chat />
             </div>
         </div>
     )

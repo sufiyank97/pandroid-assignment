@@ -1,0 +1,141 @@
+.chat{
+    position: fixed;
+    right: 1rem;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+
+
+    &-box{
+        height: fit-content;
+        width: 20rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        overflow: hidden;
+
+        &-header{
+            width: 100%;
+            height: 3rem;
+            background-color: rgb(41,90,207);
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            align-items: center;
+            cursor: pointer;
+
+            &-user{
+                width: 100%;
+                display: flex;
+                color: #fff;
+                font-size: 1rem;
+                align-items: center;
+                justify-content: space-between;
+                padding-right: .7rem;
+
+                &-mini{
+                    display: block;
+                    font-size: 1.5rem;
+                }
+
+            }
+
+            &-close{
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &-icon{
+                    font-size: 1.5rem;
+                    color: #fff;
+                }
+            }
+
+            &-title{
+                display: flex;
+                align-items: center;
+                
+
+                &-icon{
+                    display: block;
+                    font-size: 1.1rem;
+                    color : #fff;
+                    margin-right: .5rem;
+                }
+
+                &-text{
+                    font-size: 1.3rem;
+                    color: #fff;
+                    
+                }
+            }
+
+            &-icon{
+                display: block;
+                font-size: 0.4rem;
+                color: #fff;
+                transition: transform .6s;
+                &-hidden{
+                    transform: rotate(0deg);
+                }
+
+                &-active{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+
+        &-list{
+            background-color: #fff;
+            border-right: .05rem solid rgb(41,90,207);
+            border-left: .05rem solid rgb(41,90,207);
+            transition: display .5s;
+            overflow-y: scroll;
+            width: inherit;
+            height: 20rem;
+            
+            &-active{
+                display: block;
+            }
+
+            &-hidden{
+                display: none;
+            }
+
+            &-item{
+                height: 3rem;
+                width: 100%;
+                padding: 1rem 1.5rem .5rem 1rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-nohover{
+                    cursor: default;
+                }
+
+                &-hover{
+                    cursor: pointer;
+                }
+                
+                &-online{
+                    width: .5rem;
+                    height: .5rem;
+                    border-radius: 50%;
+                    background-color: black;
+                }
+
+                &-offline{
+                    width: .5rem;
+                    height: .5rem;
+                    border-radius: 50%;
+                    background-color:#bbb;
+                }
+            }
+
+            
+        }
+    }
+}
